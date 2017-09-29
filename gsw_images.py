@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 
+# attributes for colour
+# cv2.IMREAD_COLOR or 1
+# cv2.IMREAD_GRAYSCALE or 0
+# cv2.IMREAD_UNCHANGED or -1
 #load image in grayscale
 img_gs = cv2.imread('28.jpg',0)
 
