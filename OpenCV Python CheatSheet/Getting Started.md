@@ -1,4 +1,3 @@
-### OpenCV python CheatSheet:
 #### Getting Started
 ```py
 #Basic Includes
@@ -42,12 +41,21 @@ cap.release()
 cv2.createTrackbar('R','image',0,255,nothing)
 r = cv2.getTrackbarPos('R','image')
 ```
-```py
 
-```
+#### Mathematical Operation specfically numPy tools.
 ```py
+img.size #image size
+img.shape #image shape
+img.dtype #image data type generally its uint8
 
-```
-```py
+#Splitting or Merging Image Channel
+#CV Way
+b,g,r = cv2.split(img)
+img = cv2.merge((b,g,r))
 
+#numPy Way - faster
+b = img[:,:,0]
+
+#Threshold
+ret, mask = cv2.threshold(img2gray, 10, 255, cv2.THRESH_BINARY)
 ```
