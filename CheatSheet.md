@@ -10,3 +10,44 @@ import cv2
 k = cv2.waitKey(t) & 0xFF
 #k=27 for escape for others k = ord('q/w/etc').
 ```
+```py
+cv2.destroyAllWindows()
+#for destroying all opened openCV windows.
+```
+```py
+#For image read and show.
+
+img_gs = cv2.imread('28.jpg',0)
+# attributes for colour
+# cv2.IMREAD_COLOR or 1
+# cv2.IMREAD_GRAYSCALE or 0
+# cv2.IMREAD_UNCHANGED or -1
+
+cv2.imshow('grayscale',img_gs)
+
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+#Color Convert.
+```
+```py
+#Capturing from video file or camera.
+cap = cv2.VideoCapture(0) #Camera - 0 or filename.
+if not cap.isOpened():
+    cap.open()
+ret, frame = cap.read()
+cv2.imshow('color',frame)
+cap.release()
+```
+```py
+#Trackbars
+cv2.createTrackbar('R','image',0,255,nothing)
+r = cv2.getTrackbarPos('R','image')
+```
+```py
+
+```
+```py
+
+```
+```py
+
+```
